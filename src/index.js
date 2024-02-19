@@ -4,23 +4,24 @@ import { contactPage } from "./contact.js";
 
 // alert("Hello");
 
-const home = document.querySelector('#home');
-const menu = document.querySelector('#menu');
-const contact = document.querySelector('#contact');
-const wipe = document.querySelector('body');
+document.addEventListener("DOMContentLoaded", () => {
+    const wipe = document.querySelector('#content');
 
-home.addEventListener('click', () => {
-    wipe.innerHTML = '';
-    homePage();
+    const home = document.querySelector('#home');
+    home.addEventListener('click', () => {
+        wipe.innerHTML = '';
+        homePage();
+    });
+
+    const menu = document.querySelector('#menu');
+    menu.addEventListener('click', () => {
+        wipe.innerHTML = '';
+        menuPage();
+    });
+
+    const contact = document.querySelector('#about');
+    contact.addEventListener('click', () => {
+        wipe.innerHTML = '';
+        contactPage();
+    });
 });
-
-menu.addEventListener('click', () => {
-    wipe.innerHTML = '';
-    menuPage();
-});
-
-contact.addEventListener('click', () => {
-    wipe.innerHTML = '';
-    contactPage();
-});
-
